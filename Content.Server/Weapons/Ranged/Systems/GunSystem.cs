@@ -24,7 +24,7 @@ using Robust.Shared.Utility;
 using Robust.Shared.Containers;
 using Content.Shared.Interaction; // Frontier
 using Content.Shared.Examine; // Frontier
-using Content.Server.Power.Components;
+using Content.Shared.Hands.Components;
 using Content.Shared.Power;
 using Robust.Shared.Physics.Components; // Frontier
 
@@ -409,6 +409,10 @@ public sealed partial class GunSystem : SharedGunSystem
 
     private void FireEffects(EntityCoordinates fromCoordinates, float distance, Angle angle, HitscanPrototype hitscan, EntityUid? hitEntity = null)
     {
+        // Raise custom event for radar tracking
+        var radarEv = new _Mono.Radar.HitscanRadarSystem.HitscanFireEffectEvent(fromCoordinates, distance, angle, hitscan, hitEntity, GetShooterFromCoordinates(fromCoordinates));
+        RaiseLocalEvent(radarEv);
+
         // Lord
         // Forgive me for the shitcode I am about to do
         // Effects tempt me not
@@ -465,6 +469,30 @@ public sealed partial class GunSystem : SharedGunSystem
                 Sprites = sprites,
             }, Filter.Pvs(fromCoordinates, entityMan: EntityManager));
         }
+    }
+
+    // Helper method to find the shooter from coordinates, typically a gun or the coordinate's entity
+    private EntityUid? GetShooterFromCoordinates(EntityCoordinates coordinates)
+    {
+        var entity = coordinates.EntityId;
+
+        // Check if the entity is a gun
+        if (HasComp<GunComponent>(entity))
+            return entity;
+
+        // Try to find a parent that might be the shooter
+        if (TryComp<TransformComponent>(entity, out var transform) && transform.ParentUid != EntityUid.Invalid)
+        {
+            if (HasComp<GunComponent>(transform.ParentUid))
+                return transform.ParentUid;
+
+            // If parent has hands, it might be the shooter
+            if (HasComp<HandsComponent>(transform.ParentUid))
+                return transform.ParentUid;
+        }
+
+        // Default to the entity itself
+        return entity;
     }
 
     #endregion
