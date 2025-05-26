@@ -34,7 +34,7 @@
         sound:
           collection: MetalBreak
   - type: StaticPrice
-    price: 30 # Frontier: 75<30
+    price: 75
 
 - type: entity
   abstract: true
@@ -128,7 +128,7 @@
     color: "#03fc4e"
     energy: 0.7
   - type: Charger
-    chargeRate: 50
+    chargeRate: 125 # Frontier: 50 Mono
   - type: Sprite
     sprite: Structures/Power/cage_recharger.rsi
   - type: PowerCellSlot
@@ -177,7 +177,7 @@
   - type: Machine
     board: TurboItemRechargerCircuitboard
   - type: Charger
-    chargeRate: 100
+    chargeRate: 250 # Frontier: 100 Mono
   - type: ItemSlots
     slots:
       charger_slot:
@@ -207,7 +207,7 @@
       shader: "unshaded"
   - type: WallMount
   - type: Charger
-    chargeRate: 25
+    chargeRate: 62.5 # Frontier: 25 Mono
   - type: ItemSlots
     slots:
       charger_slot:
@@ -227,24 +227,25 @@
   - type: Sprite
     sprite: Structures/Power/borg_charger.rsi
     layers:
-      - state: borgcharger-u1
-        map: ["base"]
-      - state: borgcharger0
-        map: ["enum.PowerDeviceVisualLayers.Powered"]
-        shader: "unshaded"
-      - state: borgcharger1
-        map: ["charged"]
-        shader: "unshaded"
-        visible: false
-      - state: borgdecon1
-        map: ["enum.WiresVisualLayers.MaintenancePanel"]
-        visible: false
+    - state: borgcharger-u1
+      map: ["base"]
+    - state: borgcharger0
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      shader: "unshaded"
+    - state: borgcharger1
+      map: ["charged"]
+      shader: "unshaded"
+      visible: false
+    - state: borgdecon1
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      visible: false
   - type: Charger
-    chargeRate: 30
+    chargeRate: 75 # Frontier: 30 Mono
     slotId: entity_storage
     whitelist:
       components:
       - BorgChassis
+      - Inventory #Goobstation - Modsuits
   - type: Construction
     containers:
     - machine_parts
@@ -288,6 +289,7 @@
     whitelist:
       components:
       - BorgChassis
+      - Silicon # EE IPCs
   - type: ContainerContainer
     containers:
       entity_storage: !type:Container

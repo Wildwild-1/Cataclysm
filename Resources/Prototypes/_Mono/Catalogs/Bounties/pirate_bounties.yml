@@ -1,11 +1,11 @@
-- type: pirateBounty
-  id: PirateBountyScaf
-  reward: 5
-  description: pirate-bounty-description-scaf
+- type: pirateBounty # Mono SCAF-> General Merc Suits including SCAF
+  id: PirateBountyMercSuit
+  reward: 4
+  description: pirate-bounty-description-merc-suit
   entries:
-  - name: pirate-bounty-item-scaf
+  - name: pirate-bounty-item-merc-suit
     amount: 1
-    id: ClothingOuterHardsuitScaf
+    id: ClothingOuterHardsuitMerc
 
 - type: pirateBounty
   id: PirateBountyTacsuit
@@ -16,14 +16,32 @@
     amount: 1
     id: ClothingOuterHardsuitTacsuit
 
-- type: pirateBounty
-  id: PirateBountyHfBlade
-  reward: 6
-  description: pirate-bounty-description-hfblade
+- type: pirateBounty # Mono
+  id: PirateBountyTSFEnergyWeapon
+  reward: 5
+  description: pirate-bounty-description-energy-weapon
   entries:
-  - name: pirate-bounty-item-hfblade
+  - name: pirate-bounty-item-energy-weapon
     amount: 1
-    id: HFKatana
+    id: TSFEnergyWeapon
+
+- type: pirateBounty # Mono
+  id: PirateBountyStandardTSFLongarm
+  reward: 4
+  description: pirate-bounty-description-standard-tsf-longarm
+  entries:
+  - name: pirate-bounty-item-standard-tsf-longarm
+    amount: 1
+    id: StandardTSFLongarm
+
+- type: pirateBounty # Mono
+  id: PirateBountyExperimentalTSFWeapon
+  reward: 12
+  description: pirate-bounty-description-experimental-tsf-weapon
+  entries:
+  - name: pirate-bounty-item-experimental-tsf-weapon
+    amount: 1
+    id: ExperimentalTSFWeapon
 
 - type: pirateBounty
   id: PirateBountyShipWeapon
@@ -37,21 +55,21 @@
 
 - type: pirateBounty
   id: PirateBountyFentanylLarge
-  reward: 4
+  reward: 5
   description: pirate-bounty-description-generic
   entries:
   - name: pirate-bounty-item-fentanyl
     amount: 6
     id: FentanylCrystal
 
-- type: pirateBounty
-  id: PirateBountyFentanylSmall
-  reward: 2
-  description: pirate-bounty-description-generic
-  entries:
-  - name: pirate-bounty-item-fentanyl
-    amount: 3
-    id: FentanylCrystal
+#- type: pirateBounty - Mono
+#  id: PirateBountyFentanylSmall
+#  reward: 2
+#  description: pirate-bounty-description-generic
+#  entries:
+#  - name: pirate-bounty-item-fentanyl
+#    amount: 3
+#    id: FentanylCrystal
 
 - type: pirateBounty
   id: PirateBountyFTLDrive
@@ -83,24 +101,33 @@
     amount: 1
     id: GunneryServer
 
-- type: pirateBounty
-  id: PirateBountyMercGun
-  reward: 4
-  description: pirate-bounty-description-pmc
-  entries:
-  - name: pirate-bounty-item-pmc-gun
-    amount: 1
-    id: PMCGun
+#- type: pirateBounty - Mono
+#  id: PirateBountyMercGun
+#  reward: 3
+#  description: pirate-bounty-description-pmc
+#  entries:
+#  - name: pirate-bounty-item-pmc-gun
+#    amount: 1
+#    id: PMCGun
 
-- type: pirateBounty
-  id: PirateBountyNitroOxyAirCan
-  reward: 1
-  description: pirate-bounty-description-lifesupport
-  spawnChest: false
+#- type: pirateBounty - Mono
+#  id: PirateBountyNitroOxyAirCan
+#  reward: 1
+#  description: pirate-bounty-description-lifesupport
+#  spawnChest: false
+#  entries:
+#  - name: pirate-bounty-item-n2-o2-air
+#    amount: 4
+#    id: LifeSupportCan
+
+- type: pirateBounty # Mono
+  id: PirateBountyEncryptionKeyTSFMC
+  reward: 5
+  description: pirate-bounty-description-encryption-key-TSFMC
   entries:
-  - name: pirate-bounty-item-n2-o2-air
-    amount: 4
-    id: LifeSupportCan
+  - name: pirate-bounty-item-encryption-key-TSFMC
+    amount: 1
+    id: EncryptionKeyNfsd
 
 - type: pirateBounty
   id: PirateBountyTechfab
@@ -114,7 +141,7 @@
 
 - type: pirateBounty
   id: PirateBountyCybernetics
-  reward: 2
+  reward: 4
   description: pirate-bounty-description-cybernetics
   entries:
   - name: pirate-bounty-item-cybernetics
@@ -123,7 +150,7 @@
 
 - type: pirateBounty
   id: PirateBountyRTG
-  reward: 2
+  reward: 3
   description: pirate-bounty-description-rtg
   spawnChest: false
   entries:

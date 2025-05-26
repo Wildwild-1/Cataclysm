@@ -7,9 +7,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
+        - id: NitrogenTankFilled
+        - id: OxygenTankFilled
         - id: ClothingOuterHardsuitEVA
         - id: ClothingHeadHelmetEVA
         - id: ClothingMaskBreath
@@ -23,9 +22,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitEVA
         - id: ClothingHeadHelmetEVALarge
         - id: ClothingMaskBreath
@@ -39,9 +37,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterSuitEmergency
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled # Frontier
@@ -54,8 +51,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: OxygenTankFilled # Frontier
-        - id: AirTankFilled # Frontier
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitEVAPrisoner
         - id: ClothingHeadHelmetEVALarge
         - id: ClothingMaskBreath
@@ -68,9 +65,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitSyndicate
         - id: ClothingHeadHelmetSyndicate
         - id: ClothingMaskGasSyndicate
@@ -84,9 +80,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitPirateScaf # Mono
 #        - id: ClothingMaskGas # Mono
         - id: JetpackBlackFilled # Frontier
@@ -100,14 +95,12 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
-#        - id: JetpackVoidFilled # Frontier
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
+        - id: JetpackVoidFilled
         - id: ClothingOuterHardsuitAncientEVA
         - id: ClothingHeadHelmetAncient
         - id: ClothingMaskBreath
-        - id: JetpackMiniFilled # Frontier
 
 #HARDSUITS
 #Basic hardsuit
@@ -118,9 +111,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitBasic
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled # Frontier
@@ -133,11 +125,10 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingShoesBootsMag
-        - id: ClothingOuterHardsuitEngineering
+        - id: UndeterminedVoidsuitEngineer # Goob edit
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled # Frontier
   - type: AccessReader
@@ -151,10 +142,9 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
-        - id: ClothingOuterHardsuitAtmos
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
+        - id: ClothingModsuitAtmostechPowerCell
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled # Frontier
   - type: AccessReader
@@ -168,10 +158,9 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
-        - id: ClothingOuterHardsuitSecurity
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
+        - id: UndeterminedVoidsuitSecurity # Goob edit
         - id: ClothingMaskBreath
         - id: JetpackSecurityFilled # Frontier
         - id: ClothingShoesBootsMagSecurityFilled # Frontier
@@ -220,7 +209,7 @@
 #HOS's hardsuit
 - type: entity
   id: SuitStorageHOS
-  parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, BaseStructureDisableToolUse, SuitStorageBase] # Frontier: added BaseStructureDisableToolUse
+  parent: SuitStorageBase
   suffix: Head of Security
   components:
   - type: EntityTableContainerFill
@@ -233,14 +222,13 @@
 #Warden's hardsuit
 - type: entity
   id: SuitStorageWarden
-  parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, BaseStructureDisableToolUse, SuitStorageBase] # Frontier: added BaseStructureDisableToolUse
+  parent: SuitStorageBase
   suffix: Warden
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitWarden
         - id: ClothingMaskBreath
         - id: JetpackSecurityFilled # Frontier
@@ -282,9 +270,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitSyndie
         - id: ClothingShoesBootsMagSyndie
         - id: ClothingMaskGasSyndicate
@@ -298,9 +285,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitPirateScaf # Mono
         - id: ClothingMaskGasSwat # Mono
         - id: ClothingNeckCloakPirateCap # Frontier
@@ -315,9 +301,8 @@
   components:
   - type: StorageFill
     contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: AirTankFilled
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled
         - id: ClothingOuterHardsuitWizard
         - id: ClothingMaskBreath
         - id: JetpackBlackFilled # Frontier: JetpackVoidFilled<JetpackBlackFilled

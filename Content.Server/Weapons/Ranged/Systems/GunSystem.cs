@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Server._Mono.FireControl;
 using Content.Server.Cargo.Systems;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Weapons.Ranged.Components;
@@ -324,6 +325,10 @@ public sealed partial class GunSystem : SharedGunSystem
         }
 
         ShootProjectile(uid, mapDirection, gunVelocity, gunUid, user, gun.ProjectileSpeedModified);
+        if (HasComp<FireControllableComponent>(gunUid))
+        {
+            EnsureComp<ProjectileGridPhaseComponent>(uid);
+        }
     }
 
     /// <summary>

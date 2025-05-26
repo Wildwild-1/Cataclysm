@@ -27,19 +27,19 @@
     soundEmpty:
       path: /Audio/_DV/Weapons/Guns/Empty/dry_fire.ogg
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 2000
+    maxCharge: 2250 # Mono 2000->2250
+    startingCharge: 2250 # Mono 2000->2250
   - type: ProjectileBatteryAmmoProvider
     proto: BulletDisabler
-    fireCost: 100
+    fireCost: 75 # 100->75
   - type: EnergyGun
     fireModes:
     - proto: BulletDisabler
-      fireCost: 100
+      fireCost: 75 # 100->75
       name: disable
       state: disabler
     - proto: BulletEnergyGunLaser
-      fireCost: 200
+      fireCost: 150 # 200->150
       name: kill
       state: lethal
   - type: MagazineVisuals
@@ -54,6 +54,9 @@
           Disabler: { state: mode-disabler }
           Lethal: { state: mode-lethal }
           Special: { state: mode-stun } # Unused
+  - type: PirateBountyItem # Mono
+    id: StandardTSFLongarm
+
 
 - type: entity
   name: cyborg energy gun
@@ -84,22 +87,22 @@
     soundEmpty:
       path: /Audio/_DV/Weapons/Guns/Empty/dry_fire.ogg
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 2000
+    maxCharge: 2250 # Mono 2000->2250
+    startingCharge: 2250 # Mono 2000->2250
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 25
   - type: ProjectileBatteryAmmoProvider
     proto: BulletDisabler
-    fireCost: 100
+    fireCost: 75 # 100->75
   - type: EnergyGun
     fireModes:
     - proto: BulletDisabler
-      fireCost: 100
+      fireCost: 75 # 100->75
       name: disable
       state: disabler
     - proto: BulletEnergyGunLaser
-      fireCost: 200
+      fireCost: 150 # 200->150
       name: kill
       state: lethal
   - type: MagazineVisuals
@@ -120,7 +123,7 @@
   parent: [BaseWeaponBatterySmall, BaseCommandContraband] # Frontier: added BaseCommandContraband
   categories: [DoNotMap] # Frontier / Monolith - this is the colonel /sheriff's gun
   id: WeaponEnergyGunMultiphase
-  description: This is an expensive, modern recreation of an antique laser gun. This gun has several unique firemodes, but lacks the ability to recharge over time. On the handle is a label that says 'for authorized use only.'
+  description: This is an expensive, modern recreation of an antique laser gun. This gun has several unique firemodes, but lacks the ability to recharge over time in exchange for a larger battery. On the handle is a label that says 'for authorized use only.'
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Battery/multiphase_energygun.rsi
@@ -140,24 +143,25 @@
     - suitStorage # Frontier
     sprite: _DV/Objects/Weapons/Guns/Battery/multiphase_energygun.rsi
   - type: Gun
+    fireRate: 2.5
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/laser.ogg
     soundEmpty:
       path: /Audio/_DV/Weapons/Guns/Empty/dry_fire.ogg
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 2000
+    maxCharge: 3750 # Mono 2000->3750
+    startingCharge: 3750 # Mono 2000->3750
   - type: ProjectileBatteryAmmoProvider
     proto: BulletDisabler
-    fireCost: 100
+    fireCost: 75 # Mono 100 -> 75
   - type: EnergyGun
     fireModes:
     - proto: BulletDisabler
-      fireCost: 100
+      fireCost: 75 # Mono 100 -> 75
       name: disable
       state: disabler
     - proto: BulletEnergyGunLaser
-      fireCost: 200
+      fireCost: 150 # Mono 200 -> 150
       name: lethal
       state: lethal
     # - proto: BulletEnergyGunIon
@@ -182,3 +186,5 @@
     - Sidearm
   - type: StaticPrice
     price: 750
+  - type: PirateBountyItem # Mono
+    id: ExperimentalTSFWeapon

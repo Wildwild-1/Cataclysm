@@ -10,6 +10,14 @@
   - type: Item
     shape:
     - 0,0,3,2
+  - type: Armor
+    modifiers:
+      coefficients: # Made to have no protection - Mono
+        Blunt: 1
+        Slash: 1
+        Piercing: 1
+        Heat: 1
+        Radiation: 1
   - type: ClothingSpeedModifier # Changed to 5% because the suit doesn't provide any protection other than from low pressure
     walkModifier: 0.95
     sprintModifier: 0.95
@@ -22,7 +30,7 @@
     unequipDelay: 2
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:Container {}
       storagebase: !type:Container
         ents: []
   - type: PhysicalComposition
@@ -84,8 +92,13 @@
       - state: equipped-breathing-gear
       - state: equipped-unshaded
         shader: unshaded
+  - type: Armor
+    modifiers:
+      coefficients: # Mono
+        Caustic: 0.75
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetHydro
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetHydro
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -141,7 +154,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetMailman
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetMailman
 
 # COLORED DEPARTMENTAL
 ## CONTRACTORS
@@ -199,7 +213,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetContractor
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetContractor
 
 ## COMMAND
 - type: entity
@@ -255,8 +270,16 @@
       - state: equipped-breathing-gear
       - state: equipped-unshaded
         shader: unshaded
+  - type: Armor
+    modifiers:
+      coefficients: # CL suit, seems fine to have something - Mono
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetSr
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetSr
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -312,7 +335,14 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetCaptain
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetCaptain
+  - type: Armor
+    modifiers:
+      coefficients: # Cap suit, seems fine to have something - Mono
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
 
 ## ENGINEERING
 - type: entity
@@ -333,6 +363,12 @@
     - state: icon-breathing-gear
     - state: icon-unshaded
       shader: unshaded
+  - type: Armor
+    modifiers:
+      coefficients: # Engie suit gets something - Mono
+        Blunt: 0.95
+        Radiation: 0.75
+
   - type: Item
     inhandVisuals:
       left:
@@ -369,7 +405,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetEngineer
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetEngineer
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -425,7 +462,13 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetAtmosTech
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetAtmosTech
+  - type: Armor
+    modifiers:
+      coefficients: # Engie suit gets something - Mono
+        Blunt: 0.95
+        Radiation: 0.75
 
 ## SUPPLY
 - type: entity
@@ -482,7 +525,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetCargo
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetCargo
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -538,7 +582,15 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetSalvage
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetSalvage
+  - type: Armor
+    modifiers:
+      coefficients: # Salv suit, seems fine to have something - Mono
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+
 
 ## MEDICAL
 - type: entity
@@ -595,7 +647,13 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetMedic
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetMedic
+  - type: Armor
+    modifiers:
+      coefficients: # Med suit, seems fine to have something - Mono
+        Caustic: 0.75
+
 
 ## SCIENCE
 - type: entity
@@ -651,8 +709,13 @@
       - state: equipped-breathing-gear
       - state: equipped-unshaded
         shader: unshaded
+  - type: Armor
+    modifiers:
+      coefficients: # Mono
+        Caustic: 0.75
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetScientist
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetScientist
 
 ## SERVICE
 - type: entity
@@ -708,8 +771,13 @@
       - state: equipped-breathing-gear
       - state: equipped-unshaded
         shader: unshaded
+  - type: Armor
+    modifiers:
+      coefficients: # Mono
+        Caustic: 0.75
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetJanitor
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetJanitor
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -765,7 +833,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetServiceWorker
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetServiceWorker
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -821,7 +890,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetChaplain
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetChaplain
 
 ## Boxing
 - type: entity
@@ -879,7 +949,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetBoxerRed
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetBoxerRed
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -936,7 +1007,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetBoxerGreen
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetBoxerGreen
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -993,7 +1065,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetBoxerBlue
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetBoxerBlue
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -1050,7 +1123,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetBoxerYellow
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetBoxerYellow
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -1109,7 +1183,8 @@
       - state: inhand-right-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetBoxerRandom
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetBoxerRandom
 
 ## WILDCARDS
 - type: entity
@@ -1166,7 +1241,8 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetPilot
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetPilot
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -1222,7 +1298,15 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetMercenary
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetMercenary
+  - type: Armor
+    modifiers:
+      coefficients: # Mono
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -1278,7 +1362,15 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetPrivateSec
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetPrivateSec
+  - type: Armor
+    modifiers:
+      coefficients: # Mono
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+
 
 ## NFSD
 - type: entity
@@ -1335,7 +1427,14 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetNfsd
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetNfsd
+  - type: Armor
+    modifiers:
+      coefficients: # Mono
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
 
 ## PLAYER FACTIONS
 - type: entity
@@ -1398,7 +1497,15 @@
       - state: equipped-unshaded
         shader: unshaded
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetLvhi
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetLvhi
+  - type: Armor
+    modifiers:
+      coefficients: # Mono
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+
 
 - type: entity
   parent: NFClothingOuterEVASuitBase
@@ -1466,7 +1573,15 @@
         state: decor_base_OuterClothing_armor_05
         color: "#8f1717"
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadEVAHelmetArcadia
+    clothingPrototypes:
+      head:  ClothingHeadEVAHelmetArcadia
+  - type: Armor
+    modifiers:
+      coefficients: # Mono
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+
 
 #FSB suit
 
@@ -1484,6 +1599,13 @@
     sprite: _NF/Clothing/OuterClothing/Suits/fsb_voidsuit.rsi
   - type: Clothing
     sprite: _NF/Clothing/OuterClothing/Suits/fsb_voidsuit.rsi
+  - type: Armor
+    modifiers:
+      coefficients: # Mono
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitFSB
+    clothingPrototypes:
+      head:  ClothingHeadHelmetHardsuitFSB
     slot: head

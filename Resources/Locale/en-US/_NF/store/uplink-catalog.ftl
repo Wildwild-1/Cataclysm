@@ -158,11 +158,15 @@ uplink-security-spaceblade-sec-desc = The latest in stun tech.
 uplink-security-contraband-forensics-module-name = Contraband Forenics Module
 uplink-security-contraband-forensics-module-desc = A program for scanning and reporting contraband dead drops and pods for bounties. Slots into a forensic scanner.
 
-store-category-piratehardsuits = Equipment
+# Mono edit
+store-category-pirateequipment = Equipment
 store-category-pirateweapons = Weapons
+store-category-piratemedical = Medical
 store-category-pirateutility = Utility
 store-category-pirateammo = Ammunition
 store-category-pirateexplosives = Explosives
+store-category-pirategambling = Gambling
+# Mono edit end
 
 uplink-pirate-hardsuit-name = Rogue Hardsuit
 uplink-pirate-hardsuit-desc = A heavy space suit that provides some basic protection from the cold harsh realities of deep space.
@@ -218,7 +222,7 @@ uplink-pirate-radio-implanter-name = Radio Implanter
 uplink-pirate-radio-implanter-desc = Implants a rogue sector radio, allowing covert communication without a headset.
 
 
-#Mono
+# Mono
 
 uplink-security-anti-poison-pen-name = Poison auto-injector
 uplink-security-anti-poison-pen-desc = A rapid dose of anti-poison. Contains ultravasculine and epinephrine.
@@ -235,6 +239,9 @@ uplink-security-rad-pen-desc = A rapid dose of anti-radiation. Contains arithraz
 uplink-security-combat-pen-name = Combat Medipen
 uplink-security-combat-pen-desc = A general use shot of omnizine, packaged in a autoinjector.
 
+uplink-security-compact-defibrillator-name = Compact Defibrillator
+uplink-security-compact-defibrillator-desc = A portable defibrillator made for field revivals.
+
 uplink-security-cash5000-name = 5,000 Spesos
 uplink-security-cash5000-desc = Cold, hard cash.
 
@@ -244,4 +251,4 @@ uplink-security-thrusterkit-desc = Contains 32 super capaciters. Perfect for upg
 uplink-security-cyborg-module-name = Security Cyborg Module
 uplink-security-cyborg-module-desc = A machete, an energy gun, and a stun baton, made specifically for borgs. Wait, don't Rogues have the same thing?
 
-#Mono End
+# Mono End

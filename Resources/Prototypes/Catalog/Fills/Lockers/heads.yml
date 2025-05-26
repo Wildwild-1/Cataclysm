@@ -71,7 +71,8 @@
     - id: ClothingMaskGasCaptain
     #    - id: JetpackCaptainFilled # Frontier
     #    - id: OxygenTankFilled # Frontier
-    - id: AirTankFilled # Frontier
+    - id: OxygenTankFilled
+    - id: NitrogenTankFilled
     - id: JetpackMiniFilled # Frontier
 
 # No laser locker, used when the antique laser is placed in the special display crate
@@ -176,11 +177,11 @@
     children:
     - id: ClothingMaskGasAtmos
     - id: ClothingOuterHardsuitEngineeringWhite
-    #    - id: ClothingShoesBootsMagAdv # Frontier
-    - id: ClothingShoesBootsMag # Frontier
+    - id: ClothingShoesBootsMagAdv
     #    - id: JetpackVoidFilled # Frontier
     #    - id: OxygenTankFilled # Frontier
-    - id: AirTankFilled # Frontier
+    - id: OxygenTankFilled
+    - id: NitrogenTankFilled
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker
@@ -215,25 +216,25 @@
   table: !type:AllSelector
     children:
     #    - id: BoxEncryptionKeyMedical # Frontier - bloat
-    #    - id: ClothingBackpackDuffelSurgeryFilled # Frontier - bloat
+    - id: ClothingBackpackDuffelSurgeryFilled # Frontier Revert - Mono
     #    - id: ClothingCloakCmo # Frontier - bloat
     - id: ClothingEyesHudMedical
-    #    - id: ClothingHandsGlovesNitrile # Frontier - bloat
-    #    - id: ClothingHeadHatBeretCmo # Frontier - bloat
+    - id: ClothingHandsGlovesNitrile
     - id: ClothingHeadsetAltMedical
-    #    - id: ClothingMaskSterile # Frontier - bloat
-    #    - id: DoorRemoteMedical # Frontier - bloat
+    - id: ClothingMaskSterile
     - id: HandheldCrewMonitor
-    #    - id: Hypospray # Frontier - balance
-    - id: HypoMini # Frontier
-    #    - id: MedicalTechFabCircuitboard # Frontier - bloat
-    #    - id: MedkitFilled # Frontier - bloat
-    #    - id: RubberStampCMO # Frontier - MOM stamp
+    - id: Hypospray
+    - id: MedicalTechFabCircuitboard
+    - id: MedkitFilled
+    - id: RubberStampCMO
+    # Goobstation Start
+    - id: Multitool
     - id: MedTekCartridge
     - id: ClothingBeltMedicalFilled # Frontier - add more bloat
     - id: RubberStampDoctor # Frontier
     # Shitmed
     - id: MedicalBiofabMachineBoard
+    - id: MMI # Shitmed
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -242,8 +243,8 @@
     children:
     - id: ClothingMaskBreathMedical
     - id: ClothingOuterHardsuitMedical
-    #    - id: OxygenTankFilled # Frontier
-    - id: AirTankFilled # Frontier
+    - id: OxygenTankFilled
+    - id: NitrogenTankFilled
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker
@@ -295,8 +296,8 @@
     children:
     - id: ClothingMaskBreath
     - id: ClothingOuterHardsuitRd
-    #    - id: OxygenTankFilled # Frontier
-    - id: AirTankFilled # Frontier
+    - id: OxygenTankFilled
+    - id: NitrogenTankFilled
     - id: JetpackMiniFilled # Frontier
 
 # No hardsuit locker
@@ -348,15 +349,6 @@
     #    - id: WeaponDisabler # Frontier
     #    - id: WantedListCartridge # Frontier
     - id: DrinkHosFlask
-    - id: ClothingUniformJumpskirtHoSAlt # Frontier: consistency with old fill
-    - id: ClothingUniformJumpsuitHoSAlt # Frontier: consistency with old fill
-    - id: ClothingHeadHatBeretHoS # Frontier: consistency with old fill
-    - id: ClothingHeadHatHoshat # Frontier: consistency with old fill
-    - id: ClothingUniformJumpskirtHosFormal # Frontier: consistency with old fill
-    - id: ClothingUniformJumpsuitHosFormal # Frontier: consistency with old fill
-    - id: ClothingNeckMantleHOS # Frontier: consistency with old fill
-    - id: ClothingOuterWinterHoS # Frontier: consistency with old fill
-    - id: ClothingShoesBootsWinterHoS # Frontier: consistency with old fill
     - id: Demag # Frontier
 
 # Hardsuit table, used for suit storage as well
@@ -365,9 +357,10 @@
   table: !type:AllSelector
     children:
     - id: ClothingMaskGasSwat
-    - id: ClothingOuterHardsuitSecurityRed
+    - id: UndeterminedVoidsuitHeadOfSecurity # Goob edit
     - id: JetpackSecurityFilled
     - id: OxygenTankFilled
+    - id: NitrogenTankFilled
 
 # No hardsuit locker
 - type: entity
@@ -399,7 +392,6 @@
   id: LockerFreezerVaultFilled
   suffix: Vault, Locked
   parent: LockerFreezerBase
-  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: AccessReader
     access: [ [ "Command" ] ]

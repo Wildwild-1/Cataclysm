@@ -39,6 +39,8 @@
     range: 2
     energyConsumption: 2700000
     disableDuration: 30
+  - type: PirateBountyItem # Mono
+    id: StandardTSFLongarm
 
 - type: entity
   id: WeaponLaserTurboNF

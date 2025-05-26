@@ -27,10 +27,10 @@
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
+    - map: [ "id" ] # Mono - move from between belt and back
     - map: [ "outerClothing" ] # mono - i hate you upstream
     - map: [ "eyes" ]
     - map: [ "belt" ]
-    - map: [ "id" ]
     - map: [ "back" ]
     - map: [ "neck" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
@@ -38,6 +38,7 @@
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "enum.HumanoidVisualLayers.Wings" ] # For IPC wings porting from SimpleStation
     - map: [ "mask" ]
     - map: [ "head" ]
     - map: [ "pocket1" ]

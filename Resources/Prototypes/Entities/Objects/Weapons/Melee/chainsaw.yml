@@ -14,14 +14,15 @@
     sprite: Objects/Weapons/Melee/chainsaw.rsi
     state: icon
   - type: MeleeWeapon
+    heavyStaminaCost: 10 # goob edit
     autoAttack: true
     angle: 0
     wideAnimationRotation: -135
     attackRate: 4
     damage:
       types:
-        Slash: 2
-        Blunt: 2
+        Slash: 4
+        Blunt: 4
         Structural: 4
     soundHit:
       path: /Audio/Weapons/chainsaw.ogg
@@ -30,7 +31,7 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Slash: 4
+        Slash: 6
         Structural: 4
   - type: Item
     size: Normal

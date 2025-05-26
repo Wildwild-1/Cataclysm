@@ -21,6 +21,9 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: NanoTrasen
@@ -44,6 +47,7 @@
   - SiliconsExpeditionNF # Frontier
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
+  - USSP # Mono
 
 - type: npcFaction
   id: Mouse
@@ -88,6 +92,9 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: SimpleNeutral
@@ -117,6 +124,9 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: Xeno
@@ -141,6 +151,9 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: Zombie
@@ -166,6 +179,9 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: Revolutionary
@@ -188,6 +204,8 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
 
 - type: npcFaction
   id: AllHostile # Frontier: use HostileUniversally
@@ -204,6 +222,10 @@
   - Zombie
   - Revolutionary
   - Wizard
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - PirateNF # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: Wizard
@@ -232,3 +254,6 @@
   - AberrantFleshExpeditionNF # Frontier
   - ContrabandClothing # Frontier
   - ContrabandDetection # Frontier
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono

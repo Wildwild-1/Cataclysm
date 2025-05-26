@@ -25,6 +25,9 @@
   - SiliconsExpeditionNF
   - AberrantFleshExpeditionNF
   - ContrabandClothing
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: Dwarf
@@ -80,6 +83,9 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: WizFedFaction
@@ -110,6 +116,9 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: BloodCultNF
@@ -140,6 +149,9 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: PirateNF
@@ -170,6 +182,9 @@
   - AberrantFleshExpeditionNF
   # - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: ArtifactConstruct
@@ -200,6 +215,9 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: StreetGangNF
@@ -230,6 +248,9 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: DinosaursNF
@@ -260,6 +281,9 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: ExplorersExpeditionNF
@@ -290,6 +314,9 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: MercenariesExpeditionNF
@@ -320,6 +347,9 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: SiliconsExpeditionNF
@@ -350,6 +380,9 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: AberrantFleshExpeditionNF
@@ -380,6 +413,9 @@
   #- AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: ContrabandClothing
@@ -410,6 +446,9 @@
   - AberrantFleshExpeditionNF
   #- ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
 
 - type: npcFaction
   id: ContrabandDetection
@@ -451,3 +490,6 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   - ContrabandDetection
+  - TSFMC # Mono
+  - TSFMCTurret # Mono
+  - USSP # Mono
