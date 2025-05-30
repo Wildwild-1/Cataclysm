@@ -62,13 +62,12 @@
       - PirateUplink
 
 - type: listing
-  id: UplinkPirateCombatPen
-  name: uplink-pirate-combat-pen-name
-  description: uplink-pirate-combat-pen-desc
-  productEntity: CombatMedipen
-  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
+  id: UplinkPirateSyringeCaseFilled
+  name: uplink-pirate-syringe-case-name
+  description: uplink-pirate-syringe-case-desc
+  productEntity: SyringeCaseAltFilled
   cost:
-    Doubloon: 1
+    Doubloon: 8
   categories:
   - UplinkPirateMedical
   conditions:
@@ -78,13 +77,29 @@
       - PirateUplink
 
 - type: listing
+  id: UplinkPirateCombatPen
+  name:  uplink-pirate-combat-pen-name
+  description: uplink-pirate-combat-pen-desc
+  productEntity: CombatMedipen
+  icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: morphen }
+  cost:
+    Doubloon: 1
+  categories:
+    - UplinkPirateMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - PirateUplink
+
+- type: listing
   id: UplinkPirateAntiPoisonPen
   name: uplink-pirate-anti-poison-pen-name
   description: uplink-pirate-anti-poison-pen-desc
   productEntity: AntiPoisonMedipen
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: penacid }
   cost:
-    Doubloon: 1
+    Doubloon: 2
   categories:
   - UplinkPirateMedical
   conditions:
@@ -100,7 +115,7 @@
   productEntity: PunctAutoInjector
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: punctpen }
   cost:
-    Doubloon: 1
+    Doubloon: 2
   categories:
   - UplinkPirateMedical
   conditions:
@@ -116,7 +131,7 @@
   productEntity: PyraAutoInjector
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: pyrapen }
   cost:
-    Doubloon: 1
+    Doubloon: 2
   categories:
   - UplinkPirateMedical
   conditions:
@@ -132,7 +147,7 @@
   productEntity: RadAutoInjector
   icon: { sprite: Objects/Specific/Medical/medipen.rsi, state: arithpen }
   cost:
-    Doubloon: 1
+    Doubloon: 2
   categories:
   - UplinkPirateMedical
   conditions:
@@ -382,7 +397,7 @@
       tags:
       - PirateUplink
 
-- type: listing 
+- type: listing
   id: UplinkPirateCash10000
   name: uplink-pirate-cash10000-name
   description: uplink-pirate-cash10000-desc
@@ -901,6 +916,21 @@
       tags:
       - PirateUplink
 
+- type: listing
+  id: UplinkPirateModsuit
+  name: uplink-pirate-modsuit-name
+  description: uplink-pirate-modsuit-desc
+  productEntity: ClothingModsuitRoguePowerCell
+  cost:
+    Doubloon: 25
+  categories:
+  - UplinkPirateEquipment
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
 #MARK: Explosives
 
 - type: listing
@@ -980,32 +1010,32 @@
 
 #MARK: $Gambling$
 
-- type: listing
-  id: UplinkPirateSurplus
-  name: uplink-pirate-syndisurplus-name
-  description: uplink-pirate-syndisurplus-desc
-  productEntity: CrateSyndicateSurplusBundle
-  cost:
-    Doubloon: 25
-  categories:
-  - UplinkPirateGambling
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
-
-- type: listing
-  id: UplinkPirateSuperSurplus
-  name: uplink-pirate-syndisupersurplus-name
-  description: uplink-pirate-syndisupersurplus-desc
-  productEntity: CrateSyndicateSuperSurplusBundle
-  cost:
-    Doubloon: 50
-  categories:
-  - UplinkPirateGambling
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
+#- type: listing
+#  id: UplinkPirateSurplus
+#  name: uplink-pirate-syndisurplus-name
+#  description: uplink-pirate-syndisurplus-desc
+#  productEntity: CrateSyndicateSurplusBundle
+#  cost:
+#    Doubloon: 25
+#  categories:
+#  - UplinkPirateGambling
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - PirateUplink
+#
+#- type: listing
+#  id: UplinkPirateSuperSurplus
+#  name: uplink-pirate-syndisupersurplus-name
+#  description: uplink-pirate-syndisupersurplus-desc
+#  productEntity: CrateSyndicateSuperSurplusBundle
+#  cost:
+#    Doubloon: 50
+#  categories:
+#  - UplinkPirateGambling
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - PirateUplink

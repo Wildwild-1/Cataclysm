@@ -5,6 +5,8 @@ using Content.Server._EinsteinEngines.Silicon.Charge;
 using Content.Server._EinsteinEngines.Power.Components;
 using Content.Server.Humanoid;
 using Content.Shared.Humanoid;
+using Content.Shared.Hands.Components;
+using Content.Shared.Hands.EntitySystems; //Monolith IPC rework
 
 namespace Content.Server._EinsteinEngines.Silicon.Death;
 
@@ -13,6 +15,7 @@ public sealed class SiliconDeathSystem : EntitySystem
     [Dependency] private readonly SleepingSystem _sleep = default!;
     [Dependency] private readonly SiliconChargeSystem _silicon = default!;
     [Dependency] private readonly HumanoidAppearanceSystem _humanoidAppearanceSystem = default!;
+    [Dependency] private readonly SharedHandsSystem _hands = default!; //Monolith IPC rework
 
     public override void Initialize()
     {
@@ -46,8 +49,13 @@ public sealed class SiliconDeathSystem : EntitySystem
         if (deadEvent.Cancelled)
             return;
 
-        EntityManager.EnsureComponent<SleepingComponent>(uid);
-        EntityManager.EnsureComponent<ForcedSleepingComponent>(uid);
+        /*EntityManager.EnsureComponent<SleepingComponent>(uid); Monolith IPC rework edit start
+        EntityManager.EnsureComponent<ForcedSleepingComponent>(uid);*/
+
+        if(!TryComp<HandsComponent>(uid, out var handsComp))
+            return;
+        _hands.RemoveHands(uid, handsComp); // edit end
+
 
         if (TryComp(uid, out HumanoidAppearanceComponent? humanoidAppearanceComponent))
         {
@@ -62,8 +70,11 @@ public sealed class SiliconDeathSystem : EntitySystem
 
     private void SiliconUnDead(EntityUid uid, SiliconDownOnDeadComponent siliconDeadComp, BatteryComponent? batteryComp, EntityUid batteryUid)
     {
-        RemComp<ForcedSleepingComponent>(uid);
-        _sleep.TryWaking(uid, true, null);
+        /*RemComp<ForcedSleepingComponent>(uid); Monolith IPC rework edit start
+        _sleep.TryWaking(uid, true, null);*/
+
+        _hands.AddHand(uid, "right hand", HandLocation.Right);
+        _hands.AddHand(uid, "left hand", HandLocation.Left); // edit end
 
         siliconDeadComp.Dead = false;
 
