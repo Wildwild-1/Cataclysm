@@ -156,20 +156,29 @@ public abstract partial class SharedShuttleSystem : EntitySystem
     {
         // Return the default FTL range if no powered drive was found
         // In the future, we could return a different range if an unpowered drive was found
-        if(!TryGetFTLDrive(shuttleUid, out var drive, out var driveComp)
-           || !_powerReceiverSystem.IsPowered(drive.Value))
+        if (!TryGetFTLDrive(shuttleUid, out var drive, out var driveComp) || !_powerReceiverSystem.IsPowered(drive.Value))
             return FTLRange;
 
         return driveComp.Range;
     }
 
+    /// <summary>
+    /// Tries to get the highest range FTL drive on the shuttle. Prioritizes powered drives.
+    /// </summary>
     public bool TryGetFTLDrive(EntityUid shuttleUid, [NotNullWhen(true)] out EntityUid? driveUid, [NotNullWhen(true)] out FTLDriveComponent? drive)
     {
+        var highestRange = 0f;
+
         driveUid = null;
         drive = null;
 
-        // Look for any powered FTL drives on the shuttle's grid
-        // FTL drive is now optional and only enhances range if present
+        // Okay so, this is fucking stupid, but it works.
+        // When making this method smarter I needed to do two things.
+        // 1. Maintain parity between TryGetFTLDrive results regardless of what they're used for. (so I don't cause weird bugs)
+        // 2. Get a powered drive if one exists since those are the only ones you can actually jump with.
+        // So instead of only getting powered drives we prioritize powered drives.
+        var poweredDriveFound = false;
+
         var query = AllEntityQuery<FTLDriveComponent>();
 
         while (query.MoveNext(out var uid, out var comp))
@@ -177,12 +186,26 @@ public abstract partial class SharedShuttleSystem : EntitySystem
             if (Transform(uid).GridUid != shuttleUid)
                 continue;
 
+            var isPowered = _powerReceiverSystem.IsPowered(uid);
+
+            // If we've already found an powered drive, ignore unpowered ones.
+            if (poweredDriveFound && !isPowered)
+                continue;
+
+            var isBetterCandidate = (comp.Range > highestRange) || (isPowered && !poweredDriveFound);
+
+            if (!isBetterCandidate)
+                continue;
+
+            highestRange = comp.Range;
+
             driveUid = uid;
             drive = comp;
-            return true;
+
+            poweredDriveFound = isPowered;
         }
 
-        return false;
+        return driveUid != null;
     }
 
     public float GetFTLBufferRange(EntityUid shuttleUid, MapGridComponent? grid = null)

@@ -18,8 +18,8 @@ adventure-webhook-footer =
 nf-adventure-title = Adventure
 nf-adventure-description = Join a ship crew or buy your own and explore, research, salvage, or haul your way to riches!
 
-nf-pirate-title = Battlefront
-nf-pirate-description = A battlefront disrupts TSF colonial expansion in the sector. Careful, insurgents and combatants are here.
+nf-pirate-title = Insurgency
+nf-pirate-description = Insurgency threatens TSF expansion into the sector. A tense cold war between the TSF and USSP also takes place.
 
 currency = Spesos
 

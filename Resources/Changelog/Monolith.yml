@@ -3270,3 +3270,141 @@ Entries:
       message: Added Commissar area to Camelot
   id: 391
   time: '2025-05-30T10:59:36.0000000+00:00'
+- author: RikuTheKiller
+  changes:
+    - type: Fix
+      message: >-
+        You no longer have to throw out your old FTL drive to get the benefits
+        of your new one.
+  id: 392
+  time: '2025-05-30T23:48:04.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Encryption keys in your loadout are now automatically put into your
+        headset.
+    - type: Tweak
+      message: IPCs can now fit more encryption keys (4 -> 8).
+  id: 393
+  time: '2025-05-30T23:49:10.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: Adv Surgery Duffels added to TSFMC Uplink for Brigmeds.
+  id: 394
+  time: '2025-05-30T23:51:06.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        Smuggling is now much more risky, the TSF and the rogues learn of the
+        pod much faster, and the rogues learn of pods more often. A bit less
+        accurate of where it is though.
+  id: 395
+  time: '2025-05-30T23:52:30.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: Rogue flashbang/smoke/explosive nade boxes
+    - type: Tweak
+      message: Rogue grenades are all boxes, prices adjusted.
+  id: 396
+  time: '2025-05-30T23:58:36.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Ported the betrayal knife from Goob.
+  id: 397
+  time: '2025-05-31T00:22:00.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Add
+      message: Added A-Class to CO shipyard. Bigger atmos ship finally. Still dogshit
+    - type: Fix
+      message: Fixed 20mm battery being piss shit weak.
+  id: 398
+  time: '2025-05-31T00:24:33.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Add
+      message: Radar/IFF research in Civ 3.
+    - type: Add
+      message: Advanced FTL in Experimental 3.
+    - type: Tweak
+      message: Normal FTL moved to Experimental 2.
+    - type: Tweak
+      message: >-
+        Mech guns can be made in the exosuit fab with tech, no emag needed
+        anymore.
+  id: 399
+  time: '2025-05-31T08:14:46.0000000+00:00'
+- author: HungryCuban
+  changes:
+    - type: Tweak
+      message: M-10 internal mass scanner increased to 350 meters.
+  id: 400
+  time: '2025-05-31T08:27:25.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: You can now copy a deed from one ID card to another.
+  id: 401
+  time: '2025-05-31T08:29:30.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        Recognized safe zones are now pacified for non-TSF due to recent
+        raiders.
+    - type: Fix
+      message: Anti-raid system should now initialize properly.
+  id: 402
+  time: '2025-05-31T09:07:40.0000000+00:00'
+- author: starch70
+  changes:
+    - type: Tweak
+      message: Added IFF control to Tumour and Zephyr.
+    - type: Fix
+      message: Fixed unpowered thrusters on Serpent.
+  id: 403
+  time: '2025-05-31T20:20:12.0000000+00:00'
+- author: Redrover1760
+  changes:
+    - type: Tweak
+      message: >-
+        All energy weapons except pulse damage increased slightly. Non-hitscan
+        lasers travel faster.
+    - type: Tweak
+      message: >-
+        Uplink energy weapons/portable recharge prices decreased. Pulse weaponry
+        cost unchanged.
+  id: 404
+  time: '2025-06-01T04:34:32.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: Job slots will now close if the shuttle console is not powered.
+  id: 405
+  time: '2025-06-01T04:49:18.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Tweak
+      message: >-
+        Godmode will only be applied to entities on first initialization. This
+        means new entities in safe zones will no longer be given godmode.
+        Hopefully resolves some issues.
+    - type: Fix
+      message: >-
+        Characters should no longer lose their Pacifist trait in safe zones. Big
+        boom.
+  id: 406
+  time: '2025-06-01T07:13:14.0000000+00:00'
+- author: Ark
+  changes:
+    - type: Add
+      message: >-
+        You are now able to rename your ship at a shipyard console! I swear if
+        you abuse this.
+  id: 407
+  time: '2025-06-01T11:24:36.0000000+00:00'
