@@ -392,6 +392,7 @@ namespace Content.Server.Database
         public Guid UserId { get; set; }
         public int SelectedCharacterSlot { get; set; }
         public string AdminOOCColor { get; set; } = null!;
+        public int MonoCoins { get; set; } = 0;
         public List<Profile> Profiles { get; } = new();
     }
 
@@ -413,6 +414,8 @@ namespace Content.Server.Database
         public string FacialHairColor { get; set; } = null!;
         public string EyeColor { get; set; } = null!;
         public string SkinColor { get; set; } = null!;
+        public float Height { get; set; } = 1.0f;
+        public float Width { get; set; } = 1.0f;
         public int SpawnPriority { get; set; } = 0;
         public List<Job> Jobs { get; } = new();
         public List<Antag> Antags { get; } = new();

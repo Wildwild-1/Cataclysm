@@ -246,6 +246,11 @@ namespace Content.Server.Database
             // Get the company with fallback to default "None"
             var company = profile.Company ?? "None";
 
+            // Validate height and width to prevent sprite scale errors
+            // Database migration set default values to 0f for existing profiles
+            var height = profile.Height <= 0.005f ? 1.0f : profile.Height;
+            var width = profile.Width <= 0.005f ? 1.0f : profile.Width;
+
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.FlavorText,
@@ -262,7 +267,9 @@ namespace Content.Server.Database
                     Color.FromHex(profile.FacialHairColor),
                     Color.FromHex(profile.EyeColor),
                     Color.FromHex(profile.SkinColor),
-                    markings
+                    markings,
+                    height,
+                    width
                 ),
                 spawnPriority,
                 jobs,
@@ -297,6 +304,8 @@ namespace Content.Server.Database
             profile.FacialHairColor = appearance.FacialHairColor.ToHex();
             profile.EyeColor = appearance.EyeColor.ToHex();
             profile.SkinColor = appearance.SkinColor.ToHex();
+            profile.Height = appearance.Height;
+            profile.Width = appearance.Width;
             profile.SpawnPriority = (int) humanoid.SpawnPriority;
             profile.Markings = markings;
             profile.Slot = slot;
@@ -378,6 +387,69 @@ namespace Content.Server.Database
 
             await db.DbContext.SaveChangesAsync();
         }
+        #endregion
+
+        #region MonoCoins
+
+        public async Task<int> GetMonoCoinsAsync(NetUserId userId, CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+
+            var prefs = await db.DbContext.Preference
+                .SingleOrDefaultAsync(p => p.UserId == userId.UserId, cancel);
+
+            return prefs?.MonoCoins ?? 0;
+        }
+
+        public async Task SetMonoCoinsAsync(NetUserId userId, int balance, CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+
+            var prefs = await db.DbContext.Preference
+                .SingleOrDefaultAsync(p => p.UserId == userId.UserId, cancel);
+
+            if (prefs != null)
+            {
+                prefs.MonoCoins = Math.Max(0, balance); // Ensure balance is never negative
+                await db.DbContext.SaveChangesAsync(cancel);
+            }
+        }
+
+        public async Task<int> AddMonoCoinsAsync(NetUserId userId, int amount, CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+
+            var prefs = await db.DbContext.Preference
+                .SingleOrDefaultAsync(p => p.UserId == userId.UserId, cancel);
+
+            if (prefs != null)
+            {
+                prefs.MonoCoins += amount;
+                prefs.MonoCoins = Math.Max(0, prefs.MonoCoins); // Ensure balance is never negative
+                await db.DbContext.SaveChangesAsync(cancel);
+                return prefs.MonoCoins;
+            }
+
+            return 0;
+        }
+
+        public async Task<bool> TrySubtractMonoCoinsAsync(NetUserId userId, int amount, CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+
+            var prefs = await db.DbContext.Preference
+                .SingleOrDefaultAsync(p => p.UserId == userId.UserId, cancel);
+
+            if (prefs != null && prefs.MonoCoins >= amount)
+            {
+                prefs.MonoCoins -= amount;
+                await db.DbContext.SaveChangesAsync(cancel);
+                return true;
+            }
+
+            return false;
+        }
+
         #endregion
 
         #region Bans

@@ -34,6 +34,17 @@
   # - type: StaticPrice # Frontier
   #   price: 100 # Frontier
   - type: BlockWeather
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 4000
 
 - type: entity
   id: PlastitaniumWindowSquareBase
@@ -82,7 +93,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 6000 # vanilla (1000) / CombatOverhaul (6000)
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -155,6 +166,7 @@
         - FullTileMask
         layer:
         - GlassLayer
+        density: 4000
   - type: Airtight
     noAirWhenFullyAirBlocked: false
     airBlockedDirection:
@@ -183,7 +195,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 6000 # vanilla (1000) / CombatOverhaul (6000)
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
