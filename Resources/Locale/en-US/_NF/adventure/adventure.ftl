@@ -1,9 +1,9 @@
 ## UI
-adventure-list-start = [color=gold]NT Galactic Bank[/color]
+adventure-list-start = [color=gold]TSF Central Bank[/color]
 adventure-list-profit = made a total profit of [color=#d19e5e]{$amount}[/color].
 adventure-list-loss = lost a total of [color=#659cc9]{$amount}[/color].
 
-adventure-webhook-list-start = NT Galactic Bank
+adventure-webhook-list-start = TSF Central Bank
 adventure-webhook-list-high = This Shift's Top Earners:
 adventure-webhook-list-low = This Shift's Biggest Spenders:
 adventure-webhook-top-profit = made a total profit of {$amount}.
@@ -18,8 +18,8 @@ adventure-webhook-footer =
 nf-adventure-title = Adventure
 nf-adventure-description = Join a ship crew or buy your own and explore, research, salvage, or haul your way to riches!
 
-nf-pirate-title = Battlefront
-nf-pirate-description = A battlefront disrupts TSF colonial expansion in the sector. Careful, insurgents and combatants are here.
+nf-pirate-title = Insurgency
+nf-pirate-description = Insurgency threatens TSF expansion into the sector. A tense cold war between the TSF and USSP also takes place.
 
 currency = Spesos
 

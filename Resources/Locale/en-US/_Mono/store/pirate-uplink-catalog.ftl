@@ -79,6 +79,10 @@ uplink-pirate-voicemask-desc = A voicemask to engage in some subterfuge and tomf
 
 uplink-pirate-cash10000-name = 10,000 spesos
 uplink-pirate-cash10000-desc = That's my boy, you made my day.
+
+uplink-pirate-cash100000-name = 100,000 spesos
+uplink-pirate-cash100000-desc = That's my boy, you really made my day.
+
 # desc is quote
 
 # MARK: Weapons
@@ -86,29 +90,32 @@ uplink-pirate-cash10000-desc = That's my boy, you made my day.
 uplink-pirate-energy-cutlass-name = Energy Cutlass
 uplink-pirate-energy-cutlass-desc = An exotic energy weapon.
 
+uplink-pirate-energy-sword-name = Energy Sword
+uplink-pirate-energy-sword-desc = Courtesy of the Gorlex Marauders. Make your mark, leave no witnesses.
+
 uplink-pirate-python-name = Python
 uplink-pirate-python-desc = A brutally simple, effective, and loud revolver. Comes loaded with .45 magnum rounds.
 
 uplink-pirate-viper-name = Viper
-uplink-pirate-viper-desc = A small, easily concealable, but somewhat underpowered gun. Retrofitted with a fully automatic receiver. Uses pistol magazines (.35 auto).
+uplink-pirate-viper-desc = A small, easily concealable, but somewhat underpowered gun. Retrofitted with a fully automatic receiver. Uses pistol magazines (9x19mm FMJ).
 
 uplink-pirate-kanabou-name = Kanabou
 uplink-pirate-kanabou-desc = A weapon for those who wish to forgo subtlety. Particularly suited to oni.
 
-uplink-pirate-ak-name = AKMS
-uplink-pirate-ak-desc = An iconic weapon of war. Uses .30 rifle ammo.
+uplink-pirate-ak-name = AKM
+uplink-pirate-ak-desc = An iconic weapon of war. Uses 7.62x39mm ammo.
 
 uplink-pirate-laser-gun-name = Retro laser blaster
 uplink-pirate-laser-gun-desc = A civilian grade weapon using light amplified by the stimulated emission of radiation.
 
 uplink-pirate-c20-name = C-20r Bundle
-uplink-pirate-c20-desc = A .35 auto light SMG, packaged with a few mags.
+uplink-pirate-c20-desc = A 9x19mm light SMG, packaged with a few mags.
 
 uplink-pirate-atreides-name = Atreides bundle
 uplink-pirate-atreides-desc = A .35 one-handed light SMG, packaged with some magazines.
 
 uplink-pirate-bulldog-name = Bulldog Bundle
-uplink-pirate-bulldog-desc = A automatic .50 shotgun, packaged with a few drums.
+uplink-pirate-bulldog-desc = A automatic 12 gauge shotgun, packaged with a few drums.
 
 uplink-pirate-vt7-name = VT7 HF Blade
 uplink-pirate-vt7-desc = A high quality HF blade.
@@ -117,53 +124,53 @@ uplink-pirate-anaconda-name = Anaconda
 uplink-pirate-anaconda-desc = The pride of Cybersun engineers. A handheld, compact, self-recharging ballistic firearm.
 
 uplink-pirate-wspr-name = WSPR
-uplink-pirate-wspr-desc = A counter to the TSFMC's Annie. Uses the same .30 subsonic ammo.
+uplink-pirate-wspr-desc = A counter to the TSFMC's Annie. Uses the same 7.62x39mm subsonic ammo.
 
 uplink-pirate-burner-name = Burner Heavy Rifle
-uplink-pirate-burner-desc = A destructive .50 caliber rifle. Supports HE ammo. Horribly destructive.
+uplink-pirate-burner-desc = A destructive 12.7x99mm rifle. Supports HE ammo. Horribly destructive.
 
 uplink-pirate-blueprint-launcher-rocket-name = RPG-7 Blueprint
 uplink-pirate-blueprint-launcher-rocket-desc = A blueprint for RPG-7 and the ammo for it. Good for long term terrorism!
 
 # MARK: Ammo
 
-uplink-pirate-box-magazine-pistol-name = Box of pistol .35 auto magazines
-uplink-pirate-box-magazine-pistol-desc = A box filled with 4 .35 auto pistol magazines.
+uplink-pirate-box-magazine-pistol-name = Box of pistol 9x19mm magazines
+uplink-pirate-box-magazine-pistol-desc = A box filled with 4 9x19mm pistol magazines.
 
-uplink-pirate-box-magazine-light-rifle-name = Box of .30 rifle magazines
-uplink-pirate-box-magazine-light-rifle-desc = A box filled with 4 .30 rifle magazines.
+uplink-pirate-box-magazine-light-rifle-name = Box of 7.62x39mm magazines
+uplink-pirate-box-magazine-light-rifle-desc = A box filled with 4 7.62x39mm magazines.
 
-uplink-pirate-magazine-box-magnum-name = Box of .45 magnum speedloaders
-uplink-pirate-magazine-box-magnum-desc = A box containing 4 .45 magnum speedloaders.
+uplink-pirate-magazine-box-45_magnum-name = Box of .45 magnum speedloaders
+uplink-pirate-magazine-box-45_magnum-desc = A box containing 4 .45 magnum speedloaders.
 
-uplink-pirate-light-rifle-magazine-box-big-name = Ammunition box (.30 rifle)
-uplink-pirate-light-rifle-magazine-box-big-desc = A box containing 200 .30 rifle catridges.
+uplink-pirate-light-rifle-magazine-box-big-name = Ammunition box (7.62x39mm FMJ)
+uplink-pirate-light-rifle-magazine-box-big-desc = A box containing 200 7.62x39mm catridges.
 
 uplink-pirate-shell-box-lethal-name = Shell box (lethal)
-uplink-pirate-shell-box-lethal-desc = A box containing 16 .50 shotgun shells.
+uplink-pirate-shell-box-lethal-desc = A box containing 16, 12 gauge shotgun shells.
 
-uplink-pirate-smg-ammo-box-name = Ammunition box (.35 auto)
-uplink-pirate-smg-ammo-box-desc = A box containing 60 .35 auto pistol catridges. Can be used to load SMG magazines.
+uplink-pirate-smg-ammo-box-name = Ammunition box (9x19mm FMJ)
+uplink-pirate-smg-ammo-box-desc = A box containing 60 9x19mm pistol catridges. Can be used to load SMG magazines.
 
-uplink-pirate-box-bulldog-ammo-name = Box of .50 pellet drums
-uplink-pirate-box-bulldog-ammo-desc = A box containing 4 .50 pellet shotgun drums.
+uplink-pirate-box-bulldog-ammo-name = Box of 12 gauge buckshot drums
+uplink-pirate-box-bulldog-ammo-desc = A box containing 4 12 gauge buckshot shotgun drums.
 
-uplink-pirate-box-bulldog-slug-ammo-name = Box of .50 slug drums
-uplink-pirate-box-bulldog-slug-ammo-desc = A box containing 4 .50 slug shotgun drums.
+uplink-pirate-box-bulldog-slug-ammo-name = Box of 12 gauge slug drums
+uplink-pirate-box-bulldog-slug-ammo-desc = A box containing 4 12 gauge slug shotgun drums.
 
-uplink-pirate-box-smg-magazine-name = Box of .35 auto SMG magazines
-uplink-pirate-box-smg-magazine-desc = A box filled with 3 .35 auto smg magazines.
+uplink-pirate-box-smg-magazine-name = Box of 9x19mm SMG magazines
+uplink-pirate-box-smg-magazine-desc = A box filled with 3 9x19mm smg magazines.
 
-uplink-subsonic-mag-name = .30 subsonic rifle mag
+uplink-subsonic-mag-name = 7.62x39mm subsonic rifle mag
 uplink-subsonic-mag-desc = Supports the WSPR and Annie.
 
-uplink-subsonic-box-name = .30 subsonic rifle box
+uplink-subsonic-box-name = 7.62x39mm subsonic rifle box
 uplink-subsonic-box-desc = A box of ammo for the WSPR and Annie.
 
-uplink-pirate-box-highcal-name = .50 ammunition box
+uplink-pirate-box-highcal-name = 12.7x99mm box
 uplink-pirate-box-highcal-desc = A box of general-purpose ammunition for the Burner heavy rifle.
 
-uplink-pirate-box-highcal-he-name = HE .50 ammunition box
+uplink-pirate-box-highcal-he-name = HE 12.7x99mm box
 uplink-pirate-box-highcal-he-desc = A box of explosive ammunition for the Burner heavy rifle.
 
 uplink-pirate-emp-rocket-name = RPG-7 EMP Rocket
@@ -191,20 +198,30 @@ uplink-pirate-modsuit-desc = An experimental modsuit prototype developed by Ullm
 
 # MARK: Explosives
 
+uplink-pirate-flashbanggrenade-box-name = Flashbang Grenade Box
+uplink-pirate-flashbanggrenade-box-desc = A box containing 4 flashbang grenades.
+
+uplink-pirate-smokegrenade-box-name = Smoke Grenade Box
+uplink-pirate-smokegrenade-box-desc = A box containing 4 smoke grenades.
+
 uplink-pirate-c4-name = C-4
 uplink-pirate-c4-desc = Use it to breach walls, dispose of bodies, break equipment or attach it to that pet you dislike. Comes with modifiable timer with minimum of 10 second setting.
 
 uplink-pirate-c4-bundle-name = C-4 Bundle
 uplink-pirate-c4-bundle-desc = Enough C-4 to blow your way into a vault and out through the back.
 
-uplink-pirate-emp-grenade-name = EMP Grenade
-uplink-pirate-emp-grenade-desc = A grenade designed to disrupt electronic systems. Useful for disrupting communications, security's energy weapons, and APCs when you're in a tight spot.
+uplink-pirate-empgrenade-box-name = EMP Grenade Box
+uplink-pirate-empgrenade-box-desc = A box containing 4 EMP grenades.
 
-uplink-pirate-incendiary-grenade-name = Incendiary Grenade
-uplink-pirate-incendiary-grenade-desc = Releases a spray of incendiary fragments, igniting anyone near the detonation area.
+uplink-pirate-incendiarygrenade-box-name = Incendiary Grenade Box
+uplink-pirate-incendiarygrenade-box-desc = A box containing 4 incendiary grenades.
 
-uplink-pirate-shrapnel-grenade-name = Shrapnel Grenade
-uplink-pirate-shrapnel-grenade-desc = Launches a spray of sharp fragments dealing great damage against unarmored targets.
+uplink-pirate-shrapnelgrenade-box-name = Shrapnel Grenade Box
+uplink-pirate-shrapnelgrenade-box-desc = A box containing 4 shrapnel grenades.
+
+uplink-pirate-explosivegrenade-box-name = Explosive Grenade Box
+uplink-pirate-explosivegrenade-box-desc = A box containing 4 explosive grenades.
+
 
 # MARK: $Gambling$
 

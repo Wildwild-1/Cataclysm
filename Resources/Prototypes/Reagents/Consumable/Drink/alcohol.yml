@@ -169,28 +169,43 @@
         - !type:OrganType
           type: Dwarf
           shouldHave: false
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         damage:
           types:
             Poison: 1
       # dwarves take less toxin damage and heal a marginal amount of brute
+      # - !type:HealthChange
+      #   conditions:
+      #   - !type:ReagentThreshold
+      #     min: 15
+      #   - !type:OrganType
+      #     type: Dwarf
+      #   damage:
+      #     types:
+      #       Poison: 0.2
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
           min: 15
         - !type:OrganType
           type: Dwarf
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
         damage:
-          types:
-            Poison: 0.2
-      - !type:HealthChange
+          groups:
+            Brute: -1
+      - !type:HealthChange # Goobstation - Dwarf buff
         conditions:
         - !type:ReagentThreshold
-          min: 15
+          min: 3
         - !type:OrganType
           type: Dwarf
         damage:
           groups:
             Brute: -1
+            Burn: -1
       - !type:ChemVomit
         probability: 0.04
         conditions:
@@ -200,6 +215,9 @@
         # dwarves immune to vomiting from alcohol
         - !type:OrganType
           type: Dwarf
+          shouldHave: false
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
           shouldHave: false
       - !type:Drunk
         boozePower: 2
@@ -298,6 +316,10 @@
     Poison:
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         damage:
           types:
             Poison: 1
@@ -1327,6 +1349,10 @@
     Poison:
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:OrganType # Goobstation - Yowie
+          type: Yowie
+          shouldHave: false
         damage:
           types:
             Poison: 1
