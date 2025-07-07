@@ -1,0 +1,30 @@
+- type: entity
+  parent: [BaseComputer]
+  id: ComputerStorageMarket
+  name: storage market computer
+  description: Used to buy and sell goods from a storage market.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      sprite: _NF/Structures/Machines/computers.rsi
+      state: cargo_market
+    - map: ["computerLayerKeys"]
+      state: tech_key
+  - type: ActivatableUI
+    key: enum.StorageMarketComputerUiKey.Default
+  - type: UserInterface
+    interfaces:
+      enum.StorageMarketComputerUiKey.Default:
+        type: StorageMarketComputerBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: ComputerStorageMarketCircuitboard
+  - type: StorageMarketComputer

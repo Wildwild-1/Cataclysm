@@ -3,7 +3,6 @@ using Content.Server._Cataclysm.Storage.Components;
 using Content.Server._Cataclysm.Storage.Events;
 using Content.Server._Cataclysm.Storage.NodeGroups;
 using Content.Server.NodeContainer;
-using Content.Server.NodeContainer.Nodes;
 using Content.Server.Power.EntitySystems;
 
 namespace Content.Server._Cataclysm.Storage.EntitySystems;
