@@ -36,7 +36,16 @@ uplink-pirate-hyperzine-desc = Combat stimulants that prevent stuns and increase
 uplink-pirate-surgery-name = Surgical Kit
 uplink-pirate-surgery-desc = A surgical kit containing the required minimum to save your friends or chop apart your enemy.
 
+uplink-pirate-omnizine-jug-name = Omnizine Jug
+uplink-pirate-omnizine-jug-desc = A jug of omnizine that can be used for making medipens and keeping your allies alive. Quietly imported from Harmony Medical Enterprises.
+
+uplink-pirate-medical-assembler-name = Medical Assembler Flatpack
+uplink-pirate-medical-assembler-desc = An assembler that can be used to make useful medical supplies.
+
 # MARK: Utility
+
+uplink-pirate-empty-implanter-name = Empty Implanter
+uplink-pirate-empty-implanter-desc = A spare, empty implanter to remove implants with, including faction tracking implants. It does not backfire on you.
 
 uplink-pirate-syndicate-magboots-name = Blood-red Magboots
 uplink-pirate-syndicate-magboots-desc = A pair of boots that prevent slipping and, in zero gravity, allow you to move normally, at the cost of a slight slowdown. Additionally, they have jetpack functionality and come fueled, but don't last for long.
@@ -50,11 +59,14 @@ uplink-pirate-energy-shield-desc = Exotic energy shield that reflects almost all
 uplink-pirate-agent-id-card-name = Agent ID Card
 uplink-pirate-agent-id-card-desc = A modified ID card that can copy accesses from other cards and change its name and job title at-will.
 
+uplink-pirate-radio-jammer-name = Radio Jammer
+uplink-pirate-radio-jammer-desc = This device will disrupt any nearby outgoing radio communication as well as suit sensors when activated.
+
 uplink-pirate-hypopen-name = Hypopen
 uplink-pirate-hypopen-desc = A chemical hypospray disguised as a pen, capable of instantly injecting up to 10u of reagents. Starts empty.
 
-uplink-pirate-implanter-freelance-name = Freelance Implanter
-uplink-pirate-implanter-freelance-desc = Implants a Freelance radio, allowing covert communication without a headset.
+uplink-pirate-implanter-freelance-name = Insurgency Implanter
+uplink-pirate-implanter-freelance-desc = Implants an Insurgency radio, allowing covert communication without a headset.
 
 uplink-pirate-emag-name = Cryptographic Sequencer
 uplink-pirate-emag-desc = A multipurpose hacking device that can configure the ways some machines work.
@@ -132,6 +144,9 @@ uplink-pirate-burner-desc = A destructive 12.7x99mm rifle. Supports HE ammo. Hor
 uplink-pirate-blueprint-launcher-rocket-name = RPG-7 Blueprint
 uplink-pirate-blueprint-launcher-rocket-desc = A blueprint for RPG-7 and the ammo for it. Good for long term terrorism!
 
+uplink-pirate-grenade-launcher-bundle-name = China Lake Bundle
+uplink-pirate-grenade-launcher-bundle-desc = PLOOP!
+
 # MARK: Ammo
 
 uplink-pirate-box-magazine-pistol-name = Box of pistol 9x19mm magazines
@@ -173,8 +188,17 @@ uplink-pirate-box-highcal-desc = A box of general-purpose ammunition for the Bur
 uplink-pirate-box-highcal-he-name = HE 12.7x99mm box
 uplink-pirate-box-highcal-he-desc = A box of explosive ammunition for the Burner heavy rifle.
 
+uplink-pirate-sniper-ammo-name = 14.5x114mm box
+uplink-pirate-sniper-ammo-desc = A box of high caliber sniper rounds for the Hristov.
+
 uplink-pirate-emp-rocket-name = RPG-7 EMP Rocket
 uplink-pirate-emp-rocket-desc = A rocket with vengeance against anything electrical. Disables and drains electrical items in it's radius.
+
+uplink-pirate-frag-grenade-name = Frag Grenade
+uplink-pirate-frag-grenade-desc = A widely destructive 40mm fragmentation grenade for the China Lake. Destroys everything a wide area.
+
+uplink-pirate-blast-grenade-name = Blast Grenade
+uplink-pirate-blast-grenade-desc = A highly lethal 40mm thermobaric grenade for the China Lake. Highly destructive in a pinpoint radius.
 
 # MARK: Equipment
 
@@ -182,16 +206,16 @@ uplink-pirate-combat-hardsuit-name = Combat Hardsuit
 uplink-pirate-combat-hardsuit-desc = Definitely not just a stolen SCAF suit. Incase you lost yours.
 
 uplink-pirate-viper-group-standard-hardsuit-name = Viper Group JACKAL Hardsuit
-uplink-pirate-viper-group-standard-hardsuit-desc = A hardsuit adorned with signature markings of the Viper Group. The armor is remarkably nimble for its protection and has a built-in nightvision system.
+uplink-pirate-viper-group-standard-hardsuit-desc = A heavy hardsuit adorned with signature markings of the Viper Group. The armor is remarkably flexible for its protection and has a built-in nightvision system.
 
 uplink-pirate-viper-group-medic-hardsuit-name = Viper Group IMP Hardsuit
-uplink-pirate-viper-group-medic-hardsuit-desc = A hardsuit adorned with signature markings of the Viper Group. The armor features various reinforced plating in vital areas and a medical HUD complemented by thermal pulse systems.
+uplink-pirate-viper-group-medic-hardsuit-desc = A light hardsuit adorned with signature markings of the Viper Group. The armor features various reinforced plating in vital areas and a medical HUD complemented by thermal pulse systems.
 
 uplink-pirate-webvest-name = Syndicate Webvest
 uplink-pirate-webvest-desc = A webvest smuggled into the sector that hasn't been downgraded like ones utilized by contractors. Great pierce resist, poor heat resist.
 
 uplink-pirate-syndie-mask-name = Syndicate Gas Mask
-uplink-pirate-syndie-mask-desc = A smuggled into the sector tactical mask that can be connected to an air supply.
+uplink-pirate-syndie-mask-desc = A tactical flash resistant gas mask that can be connected to an air supply.
 
 uplink-pirate-modsuit-name = RX-01 Rogue Modsuit
 uplink-pirate-modsuit-desc = An experimental modsuit prototype developed by Ullman Industries. When powered it provides enhanced agility and boosted sensors. "The original client died so uh, go nuts" - Felix Ullman
@@ -222,6 +246,8 @@ uplink-pirate-shrapnelgrenade-box-desc = A box containing 4 shrapnel grenades.
 uplink-pirate-explosivegrenade-box-name = Explosive Grenade Box
 uplink-pirate-explosivegrenade-box-desc = A box containing 4 explosive grenades.
 
+uplink-pirate-prowler-voucher-name = Prowler Ship Voucher
+uplink-pirate-prowler-voucher-desc = A single use voucher for a Prowler-pattern stealth craft.
 
 # MARK: $Gambling$
 

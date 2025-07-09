@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Daniel Lenrd
+# SPDX-FileCopyrightText: 2025 cheetah1984
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Nfsd
 - type: roleLoadout
   id: JobCadet
@@ -17,7 +25,7 @@
   - CadetPDA
   - ContractorWallet
   - ContractorCartridge
-  - ContractorImplanter
+#  - ContractorImplanter # Mono - TSF has a skill issue sometimes
   - ContractorEncryptionKey
   - ContractorFun
   - ContractorTrinkets
@@ -44,7 +52,6 @@
   - DeputyPDA
   - ContractorWallet
   - ContractorCartridge
-  - ContractorImplanter
   - ContractorEncryptionKey
   - ContractorFun
   - ContractorTrinkets
@@ -56,8 +63,8 @@
 - type: roleLoadout
   id: JobBrigmedic
   groups:
-  - TsfmcHead
-  - TsfmcNeck
+  - TsfmcHeadMedic
+  - TsfmcNeckMedic
   - TsfmcJumpsuit
   - TsfmcBrigmedicGloves
   - TsfmcBackpack
@@ -71,7 +78,6 @@
   - BrigmedicPDA
   - ContractorWallet
   - ContractorCartridge
-  - ContractorImplanter
   - ContractorEncryptionKey
   - ContractorFun
   - ContractorTrinkets
@@ -98,7 +104,6 @@
   - BailiffPDA
   - ContractorWallet
   - ContractorCartridge
-  - ContractorImplanter
   - ContractorEncryptionKey
   - ContractorFun
   - SeniorOfficerTrinkets
@@ -125,7 +130,6 @@
   - SeniorOfficerPDA
   - ContractorWallet
   - ContractorCartridge
-  - ContractorImplanter
   - ContractorEncryptionKey
   - ContractorFun
   - SeniorOfficerTrinkets
@@ -152,10 +156,33 @@
   - SheriffPDA
   - ContractorWallet
   - ContractorCartridge
-  - ContractorImplanter
   - ContractorFun
   - SeniorOfficerTrinkets
   - NfsdSpeciesSpecific
   - TsfmcFirearm
   - TsfmcMag
+  canCustomizeName: true
+
+- type: roleLoadout
+  id: JobTsfEngineer
+  groups:
+  - TsfmcHeadEngi
+  - TsfmcNeckEngi
+  - TsfmcJumpsuitEngi
+  - TsfmcGloves
+  - TsfmcEngiModsuit
+  - TsfmcOuterClothing
+  - TsfmcShoes
+  - TsfmcFace
+  - TsfmcEngiGlasses
+  - TsfmcUtilBelt
+  - TsfmcEars
+  - NfsdBoxSurvival
+  - TsfEngiPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorEncryptionKey
+  - ContractorFun
+  - ContractorTrinkets
+  - NfsdSpeciesSpecific
   canCustomizeName: true

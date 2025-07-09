@@ -1,3 +1,4 @@
+using Content.Server.Light.Components;
 using Content.Server.Nutrition.Components;
 using Content.Server.Shuttles.Components;
 using Content.Shared._Mono.CCVar;
@@ -16,12 +17,20 @@ namespace Content.Server._Mono;
 /// </summary>
 public sealed class SpaceGarbageCleanupSystem : EntitySystem
 {
+
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 
+    private ISawmill _log = default!;
     private TimeSpan _nextCleanup = TimeSpan.Zero;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+        _log = Logger.GetSawmill("spacegarbagecleanup");
+    }
 
     public override void Update(float frameTime)
     {
@@ -39,8 +48,16 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
 
         // Find all entities with SpaceGarbageComponent and delete them
         var query = EntityQueryEnumerator<SpaceGarbageComponent>();
-        while (query.MoveNext(out var uid, out _))
+
+        // Logging Var
+        var entCount = 0;
+
+        while (query.MoveNext(out var uid, out var comp))
         {
+            // Skip deletion if the component marks the entity as exempt.
+            if (comp.CleanupExempt == true)
+                continue;
+
             // Skip deletion if the entity is inside a container.
             if (_container.IsEntityInContainer(uid))
                 continue;
@@ -61,20 +78,19 @@ public sealed class SpaceGarbageCleanupSystem : EntitySystem
             if (HasComp<HyposprayComponent>(uid))
                 continue;
 
-            // For drinks, only skip deletion if they have solution (are not empty)
-            if (HasComp<DrinkComponent>(uid))
-            {
-                if (TryComp<DrinkComponent>(uid, out var drinkComp) &&
-                    _solutionContainer.TryGetSolution(uid, drinkComp.Solution, out _, out var solution) &&
-                    solution.Volume > 0)
-                {
-                    continue; // Skip deletion, drink has solution
-                }
-                // If no solution or empty solution, fall through to delete
-            }
+            // Skip deletion if the entity has an ExpendableLightComponent.
+            if (HasComp<ExpendableLightComponent>(uid))
+                continue;
 
+            // Skip drinks or empty containers, they are pretty useful.
+            if (HasComp<DrinkComponent>(uid))
+                continue;
+
+            // Adds entity to logging
+            entCount += 1;
             // Delete the entity
             QueueDel(uid);
         }
+        _log.Info($"Deleted {entCount} entities");
     }
 }
