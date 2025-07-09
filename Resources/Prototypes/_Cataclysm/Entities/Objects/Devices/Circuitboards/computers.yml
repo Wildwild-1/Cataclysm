@@ -1,9 +1,0 @@
-- type: entity
-  parent: BaseComputerCircuitboard
-  id: ComputerStorageMarketCircuitboard
-  name: market computer board
-  components:
-  - type: Sprite
-    state: cpu_supply
-  - type: ComputerBoard
-    prototype: ComputerStorageMarket

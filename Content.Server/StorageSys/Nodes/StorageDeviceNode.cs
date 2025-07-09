@@ -3,10 +3,10 @@ using Content.Server.NodeContainer.Nodes;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map.Components;
 
-namespace Content.Server._Cataclysm.Storage.Nodes;
+namespace Content.Server.StorageSys.Nodes;
 
 [DataDefinition]
-public sealed partial class StorageDuctNode : Node, IStoragePassiveNode
+public sealed partial class StorageDeviceNode : Node
 {
     public override IEnumerable<Node> GetReachableNodes(TransformComponent xform, EntityQuery<NodeContainerComponent> nodeQuery, EntityQuery<TransformComponent> xformQuery, MapGridComponent? grid, IEntityManager entMan)
     {
@@ -18,11 +18,9 @@ public sealed partial class StorageDuctNode : Node, IStoragePassiveNode
         var gridUid = xform.GridUid.Value;
         var gridIndex = mapSystem.TileIndicesFor(gridUid, grid, xform.Coordinates);
 
-        foreach (var (dir, node) in NodeHelpers.GetCardinalNeighborNodes(nodeQuery, grid, gridIndex))
+        foreach (var node in NodeHelpers.GetNodesInTile(nodeQuery, grid, gridIndex))
         {
-            if (node is StorageDuctNode && node != this)
-                yield return node;
-            if (node is StorageDeviceNode && dir == Direction.Invalid)
+            if (node is StorageDuctNode)
                 yield return node;
         }
     }

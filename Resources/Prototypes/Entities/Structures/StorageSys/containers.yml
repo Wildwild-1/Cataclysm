@@ -63,7 +63,7 @@
   description: Stores massive amounts of ore.
   components:
   - type: Sprite
-    sprite: _Cataclysm/Structures/Machines/Storage/Containers/ore_storage_container.rsi
+    sprite: Structures/StorageSys/Containers/ore_storage_container.rsi
     layers:
     - state: icon
   - type : StorageContainer

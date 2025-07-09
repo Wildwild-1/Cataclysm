@@ -1,4 +1,4 @@
-namespace Content.Server._Cataclysm.Storage.Nodes;
+namespace Content.Server.StorageSys.Nodes;
 
 /// <summary>
 /// Makes StorageNet not raise an event when this node type is loaded or removed.

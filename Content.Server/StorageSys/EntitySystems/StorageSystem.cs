@@ -1,11 +1,11 @@
 using System.Diagnostics.CodeAnalysis;
-using Content.Server._Cataclysm.Storage.Components;
-using Content.Server._Cataclysm.Storage.Events;
-using Content.Server._Cataclysm.Storage.NodeGroups;
+using Content.Server.StorageSys.Components;
+using Content.Server.StorageSys.Events;
+using Content.Server.StorageSys.NodeGroups;
 using Content.Server.NodeContainer;
 using Content.Server.Power.EntitySystems;
 
-namespace Content.Server._Cataclysm.Storage.EntitySystems;
+namespace Content.Server.StorageSys.EntitySystems;
 
 public sealed partial class StorageSystem : EntitySystem
 {

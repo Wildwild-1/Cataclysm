@@ -1,7 +1,7 @@
-using Content.Server._Cataclysm.Storage.NodeGroups;
+using Content.Server.StorageSys.NodeGroups;
 using Content.Server.NodeContainer.Nodes;
 
-namespace Content.Server._Cataclysm.Storage.Events;
+namespace Content.Server.StorageSys.Events;
 
 public sealed class StorageNetLoadNodeEvent : EventArgs
 {

@@ -1,11 +1,11 @@
-using Content.Server._Cataclysm.Storage.Components;
-using Content.Server._Cataclysm.Storage.EntitySystems;
-using Content.Server._Cataclysm.Storage.Nodes;
+using Content.Server.StorageSys.Components;
+using Content.Server.StorageSys.EntitySystems;
+using Content.Server.StorageSys.Nodes;
 using Content.Server.NodeContainer.NodeGroups;
 using Content.Server.NodeContainer.Nodes;
 using Content.Server.Power.EntitySystems;
 
-namespace Content.Server._Cataclysm.Storage.NodeGroups;
+namespace Content.Server.StorageSys.NodeGroups;
 
 [NodeGroup(NodeGroupID.Storage)]
 public sealed partial class StorageNet : BaseNodeGroup

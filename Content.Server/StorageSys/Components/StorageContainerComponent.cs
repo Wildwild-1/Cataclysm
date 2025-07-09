@@ -1,6 +1,6 @@
 using Content.Shared.Whitelist;
 
-namespace Content.Server._Cataclysm.Storage.Components;
+namespace Content.Server.StorageSys.Components;
 
 [RegisterComponent]
 public sealed partial class StorageContainerComponent : Component

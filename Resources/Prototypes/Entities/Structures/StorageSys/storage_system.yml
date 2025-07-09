@@ -1,8 +1,19 @@
 - type: entity
   parent: [ BaseMachinePowered, ConstructibleMachine ]
-  abstract: true
-  id: ShipMiningDrillBase
+  id: StorageSystemController
+  name: storage system controller
+  description: The heart of a storage system.
   components:
+  - type: Sprite
+    sprite: Structures/StorageSys/storage_system_controller.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: GenericVisualizer
     visuals:
       enum.PowerDeviceVisuals.Powered:
@@ -10,6 +21,12 @@
           True: { visible: true }
           False: { visible: false }
   - type: Appearance
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/server_fans.ogg
   - type: WiresVisuals
   - type: Physics
     bodyType: Static
@@ -19,7 +36,7 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-0.4,-0.4,0.4,0.4"
-        density: 500
+        density: 300
         mask:
         - MachineMask
         layer:
@@ -28,7 +45,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 100
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -37,6 +54,8 @@
         node: machineFrame
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: Machine
+    board: StorageSystemControllerCircuitboard
   - type: WiresPanel
   - type: Transform
     anchored: true
@@ -50,15 +69,4 @@
       storage:
         !type:StorageDeviceNode
         nodeGroupID: Storage
-
-- type: entity
-  parent: ShipMiningDrillBase
-  id: ShipMiningDrill
-  name: large mining drill
-  description: Carves through asteroids.
-  components:
-  - type: Sprite
-    sprite: _Cataclysm/Structures/Machines/Production/ship_drill_basic.rsi
-    snapCardinals: true
-    layers:
-    - state: icon
+  - type: StorageController
