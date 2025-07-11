@@ -1,6 +1,6 @@
 - type: entity
-  parent: [ BaseMachinePowered ]
   abstract: true
+  parent: [ BaseMachinePowered ]
   id: StorageContainer
   components:
   - type: GenericVisualizer
@@ -57,6 +57,7 @@
         - MachineLayer
 
 - type: entity
+  abstract: true
   parent: StorageContainerLarge
   id: StorageContainerOre
   name: ore storage container
