@@ -83,7 +83,7 @@
   parent: BaseItem
   id: StorageControllerDrive
   name: storage controller drive
-  description: A simple hard disk for holding storage system data.
+  description: A simple hard drive for holding storage system data.
   components:
   - type: Sprite
     sprite: Objects/Misc/module.rsi
