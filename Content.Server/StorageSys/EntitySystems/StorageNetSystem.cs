@@ -73,6 +73,8 @@ public sealed partial class StorageNetSystem : EntitySystem
         if (!TryGetStorageNet(uid, out var net))
             return;
 
+        // Uses the lower-level disconnect method since the drive is no longer in the controller.
+        // This means TryDisconnectControllerDrive(uid) would fail to find the drive.
         TryDisconnectControllerDrive(net, drive);
     }
 
