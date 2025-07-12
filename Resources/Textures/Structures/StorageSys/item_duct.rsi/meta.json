@@ -1,0 +1,59 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+	"license": "CC-BY-SA-4.0",
+	"copyright": "Made by Wild and RikuTheKiller",
+    "states": [
+        {
+            "name": "itemduct_0"
+        },
+        {
+            "name": "itemduct_1"
+        },
+        {
+            "name": "itemduct_2"
+        },
+        {
+            "name": "itemduct_3"
+        },
+        {
+            "name": "itemduct_4"
+        },
+        {
+            "name": "itemduct_5"
+        },
+        {
+            "name": "itemduct_6"
+        },
+        {
+            "name": "itemduct_7"
+        },
+        {
+            "name": "itemduct_8"
+        },
+        {
+            "name": "itemduct_9"
+        },
+        {
+            "name": "itemduct_10"
+        },
+        {
+            "name": "itemduct_11"
+        },
+        {
+            "name": "itemduct_12"
+        },
+        {
+            "name": "itemduct_13"
+        },
+        {
+            "name": "itemduct_14"
+        },
+        {
+            "name": "itemduct_15"
+        }
+    ]
+}

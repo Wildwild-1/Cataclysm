@@ -353,6 +353,9 @@
     },
     {
       "name": "supply"
+    },
+    {
+      "name": "storage_controller_drive"
     }
   ]
 }

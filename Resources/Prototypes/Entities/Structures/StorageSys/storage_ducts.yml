@@ -1,0 +1,52 @@
+- type: entity
+  id: StorageDuct
+  name: storage duct
+  description: A storage duct for transferring things between containers.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Structures/StorageSys/item_duct.rsi
+    state: itemduct_0
+    drawdepth: ItemDuct
+  - type: Icon
+    sprite: Structures/StorageSys/item_duct.rsi
+    state: itemduct_4
+  - type: NodeContainer
+    nodes:
+      storage:
+        !type:StorageDuctNode
+        nodeGroupID: Storage
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Fixtures
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100 # Excessive damage, e.g. from major explosions, skips the computational cost of spawning entities.
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors: # Gotta add the item stack drop here at some point.
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: SubFloorHide
+  - type: CollideOnAnchor
+  - type: Appearance
+  - type: IconSmooth
+    key: itemduct
+    base: itemduct_
+    mode: CardinalFlags

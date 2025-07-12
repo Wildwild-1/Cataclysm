@@ -61,6 +61,7 @@ namespace Content.Server.NodeContainer.NodeGroups
         AMEngine,
         Pipe,
         WireNet,
+        Storage,
 
         /// <summary>
         /// Group used by the TEG.

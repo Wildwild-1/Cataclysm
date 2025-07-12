@@ -1,0 +1,92 @@
+- type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: StorageController
+  name: storage controller
+  description: The heart of a storage system.
+  components:
+  - type: Sprite
+    sprite: Structures/StorageSys/storage_system_controller.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - state: drive
+      map: ["enum.StorageControllerVisuals.Drive"]
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+      enum.StorageControllerVisuals.Drive:
+        enum.StorageControllerVisuals.Drive:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Appearance
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/server_fans.ogg
+  - type: WiresVisuals
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 300
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Machine
+    board: StorageControllerCircuitboard
+  - type: WiresPanel
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+      storage_controller_drive: !type:ContainerSlot
+  - type: NodeContainer
+    nodes:
+      storage:
+        !type:StorageDeviceNode
+        nodeGroupID: Storage
+  - type: StorageController
+    drivePrototype: StorageControllerDrive
+
+- type: entity
+  parent: BaseItem
+  id: StorageControllerDrive
+  name: storage controller drive
+  description: A simple hard drive for holding storage system data.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    layers:
+    - state: storage_controller_drive
+  - type: StorageControllerDrive

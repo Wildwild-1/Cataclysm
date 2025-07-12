@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformTSFMC
@@ -8,6 +15,20 @@
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmc.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformTSFMCEngi
+  name: TSFMC engineer uniform
+  description: A black and blue urban camo uniform. Its uncomfortable and cheap, and it probably doesn't blend in with anything other than a ship interior. This one has high-vis markings for engineers.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmcengi.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/tsfmcengi.rsi
   - type: SuitSensor
     randomMode: false
     mode: SensorVitals
@@ -95,3 +116,18 @@
   - type: SuitSensor
     randomMode: false
     mode: SensorOff
+
+# Trauma Armed Forces
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitTAF
+  name: trauma armed forces jumpsuit
+  description: Standard fatigues of the Trauma Armed Forces.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/trauma.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Uniforms/Jumpsuit/trauma.rsi
+  - type: SuitSensor
+    randomMode: false
+    mode: SensorVitals

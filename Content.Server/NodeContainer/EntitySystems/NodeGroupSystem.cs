@@ -445,6 +445,7 @@ namespace Content.Server.NodeContainer.EntitySystems
                 NodeGroupID.AMEngine => Color.Purple,
                 NodeGroupID.Pipe => Color.Blue,
                 NodeGroupID.WireNet => Color.DarkMagenta,
+                NodeGroupID.Storage => Color.Brown,
                 NodeGroupID.Teg => Color.Red,
                 _ => Color.White
             };

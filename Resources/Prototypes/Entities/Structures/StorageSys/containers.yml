@@ -1,0 +1,72 @@
+- type: entity
+  abstract: true
+  parent: [ BaseMachinePowered ]
+  id: StorageContainer
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Appearance
+  - type: WiresVisuals
+  - type: Physics
+    bodyType: Static
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: WiresPanel
+  - type: Transform
+    anchored: true
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+      storage: !type:Container
+  - type: NodeContainer
+    nodes:
+      storage:
+        !type:StorageDeviceNode
+        nodeGroupID: Storage
+
+- type: entity
+  parent: StorageContainer
+  id: StorageContainerLarge
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        density: 10000 # 40000 kg, or 10 plastitanium walls.
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+- type: entity
+  abstract: true
+  parent: StorageContainerLarge
+  id: StorageContainerOre
+  name: ore storage container
+  description: Stores massive amounts of ore.
+  components:
+  - type: Sprite
+    sprite: Structures/StorageSys/Containers/ore_storage_container.rsi
+    layers:
+    - state: icon
+  - type : StorageContainer
+    capacity: 1000
+    whitelist: Ore
